@@ -12,17 +12,17 @@
 
     
     <meta name="description" content="像我就不知道什么时候把Hexo的本地文件弄丢了，所以重部署Hexo本地文件夹之后就决定将Hexo本地文件托管到GitHub，以防再次丢失。
-1.在GitHub上建立一个新的repository，名字与本地Hexo文件相同">
+托管步骤1.在GitHub上建立一个新的repository，名字与本地Hexo文件相同2.在本地Hexo文件Git Bash here，首先用git初始化管理这个目录    git init3.把Hexo所有文件加入到git的管理中    git add .">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo本地文件托管到GitHub">
-<meta property="og:url" content="http://matrixpeek.com/2015/04/26/Hexo本地文件夹托管到GitHub/index.html">
+<meta property="og:url" content="http://matrixpeek.com/2015/04/26/Hexo本地文件托管到GitHub/index.html">
 <meta property="og:site_name" content="MatrixPeek's blog">
 <meta property="og:description" content="像我就不知道什么时候把Hexo的本地文件弄丢了，所以重部署Hexo本地文件夹之后就决定将Hexo本地文件托管到GitHub，以防再次丢失。
-1.在GitHub上建立一个新的repository，名字与本地Hexo文件相同">
+托管步骤1.在GitHub上建立一个新的repository，名字与本地Hexo文件相同2.在本地Hexo文件Git Bash here，首先用git初始化管理这个目录    git init3.把Hexo所有文件加入到git的管理中    git add .">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo本地文件托管到GitHub">
 <meta name="twitter:description" content="像我就不知道什么时候把Hexo的本地文件弄丢了，所以重部署Hexo本地文件夹之后就决定将Hexo本地文件托管到GitHub，以防再次丢失。
-1.在GitHub上建立一个新的repository，名字与本地Hexo文件相同">
+托管步骤1.在GitHub上建立一个新的repository，名字与本地Hexo文件相同2.在本地Hexo文件Git Bash here，首先用git初始化管理这个目录    git init3.把Hexo所有文件加入到git的管理中    git add .">
 
     
     <link rel="alternative" href="/atom.xml" title="MatrixPeek&#39;s blog" type="application/atom+xml">
@@ -82,7 +82,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/04/26/Hexo本地文件夹托管到GitHub/" title="Hexo本地文件托管到GitHub" itemprop="url">Hexo本地文件托管到GitHub</a>
+      <a href="/2015/04/26/Hexo本地文件托管到GitHub/" title="Hexo本地文件托管到GitHub" itemprop="url">Hexo本地文件托管到GitHub</a>
   </h1>
   <p class="article-author">By
        
@@ -98,12 +98,17 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#托管步骤"><span class="toc-number">1.</span> <span class="toc-text">托管步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#同步命令"><span class="toc-number">2.</span> <span class="toc-text">同步命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#同步到本地"><span class="toc-number">2.1.</span> <span class="toc-text">同步到本地</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#同步到github"><span class="toc-number">2.2.</span> <span class="toc-text">同步到github</span></a></li></ol></li></ol>
 		
 		</div>
 		
 		<p>像我就不知道什么时候把Hexo的本地文件弄丢了，所以重部署Hexo本地文件夹之后就决定将Hexo本地文件托管到GitHub，以防再次丢失。</p>
-<p>1.在GitHub上建立一个新的repository，名字与本地Hexo文件相同</p>
+<h2 id="托管步骤">托管步骤</h2><p>1.在GitHub上建立一个新的repository，名字与本地Hexo文件相同<br>2.在本地Hexo文件Git Bash here，首先用git初始化管理这个目录<br>    git init<br>3.把Hexo所有文件加入到git的管理中<br>    git add .<br>此时使用<code>git status</code>可以看到一大片绿的文件名，表示这些文件的管理添加成功<br>4.使用命令<code>git commit -m &quot;first commit&quot;</code>,将这些文件提交到本地仓库<br>5.使用命令<code>git remote origin http://github.com/username/yourRepositoryName.git</code>把本地文件托管到该远程仓库<br>6.使用命令<code>git push origin master</code>，将本地仓库的改动推送到远程仓库</p>
+<h2 id="同步命令">同步命令</h2><h3 id="同步到本地">同步到本地</h3><p>1.clone整个Hexo文件<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone <span class="string">https:</span><span class="comment">//你的托管地址.git</span></span><br></pre></td></tr></table></figure></p>
+<p>这样即使本地Hexo文件丢失或者换了新的电脑也可以将Hexo的源文件复制到本地了<br>2.同步更新到本地<br>当远程仓库有更新时，使用<code>git pull</code>或<code>git fetch</code>即可同步代码到本地</p>
+<h3 id="同步到github">同步到github</h3><p>写博客后，使用如下命令提交更新到远程仓库<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span> .</span><br><span class="line">git commit -m </span><br><span class="line">git <span class="keyword">push</span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>参考资料：<a href="http://youthyblog.com/2014/06/28/%E4%BD%BF%E7%94%A8github%E7%AE%A1%E7%90%86hexo%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6/" target="_blank" rel="external">使用github管理hexo本地文件</a></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -121,7 +126,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://matrixpeek.com/2015/04/26/Hexo本地文件夹托管到GitHub/" data-title="Hexo本地文件托管到GitHub | MatrixPeek&#39;s blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://matrixpeek.com/2015/04/26/Hexo本地文件托管到GitHub/" data-title="Hexo本地文件托管到GitHub | MatrixPeek&#39;s blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -147,7 +152,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/04/26/Hexo本地文件夹托管到GitHub/" data-title="Hexo本地文件托管到GitHub" data-url="http://matrixpeek.com/2015/04/26/Hexo本地文件夹托管到GitHub/"></div>
+	<div class="ds-thread" data-thread-key="2015/04/26/Hexo本地文件托管到GitHub/" data-title="Hexo本地文件托管到GitHub" data-url="http://matrixpeek.com/2015/04/26/Hexo本地文件托管到GitHub/"></div>
 </section>
 
 
@@ -157,7 +162,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#托管步骤"><span class="toc-number">1.</span> <span class="toc-text">托管步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#同步命令"><span class="toc-number">2.</span> <span class="toc-text">同步命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#同步到本地"><span class="toc-number">2.1.</span> <span class="toc-text">同步到本地</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#同步到github"><span class="toc-number">2.2.</span> <span class="toc-text">同步到github</span></a></li></ol></li></ol>
  
   </div>
 
